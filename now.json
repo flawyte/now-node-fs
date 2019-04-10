@@ -5,13 +5,18 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@now/node",
-      "config": {
-        "includeFiles": ["app.js"]
-      }
+      "use": "@now/node"
+    },
+    {
+      "src": "*.js",
+      "use": "@now/static"
     }
   ],
   "routes": [
+    {
+      "src": "/(.*).js",
+      "dest": "/$1.js"
+    },
     {
       "src": "/.*",
       "dest": "index.js"
