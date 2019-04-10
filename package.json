@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "serve": "SERVE=true node index.js"
+  }
+}

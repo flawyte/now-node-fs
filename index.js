@@ -31,3 +31,10 @@ function handler(req, res) {
  */
 
 module.exports = handler;
+
+// Serve on localhost if asked to
+if (process.env.SERVE === 'true') {
+  const http = require('http');
+  const server = http.createServer(module.exports);
+  server.listen(4444, () => console.log('Listening on port 4444...'));
+}
