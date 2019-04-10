@@ -5,7 +5,10 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@now/node"
+      "use": "@now/node",
+      "config": {
+        "includeFiles": ["app.js"]
+      }
     }
   ],
   "routes": [
